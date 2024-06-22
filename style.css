@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+        /* NAV BAR */
+nav {
+  width: 100%;
+  padding: 15px;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input:checked~.subnav {
+  background-color: #5596e0;
+  /* font-size: 40px; */
+  left: 0;
+}
+
+input {
+  display: none;
+}
+
+nav i {
+  display: none !important;
+  color:white ;
+  
+}
+
+.logo {
+  max-width: 225px;
+  width: auto;
+}
+
+.subnav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.subnav {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  right:1%;
+
+}
+
+        /* SLIDESHOW IMAGES */
+
+.slideshow {
+  display: flex;
+  aspect-ratio: 15/7;
+  /* gap: 20px; */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+
+.slideshow-img {
+  width: 100%;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+  animation: slide 25s ease 5s infinite;
+
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  10%,
+  25% {
+    left: -100%;
+  }
+
+  25%,
+  35% {
+    left: -200%;
+  }
+
+  35%,
+  45% {
+    left: -300%;
+  }
+
+  45%,
+  55% {
+    left: -400%;
+  }
+
+  55%,
+  65% {
+    left: -500%;
+  }
+
+  65%,
+  75% {
+    left: -600%;
+  }
+
+  75%,
+  85% {
+    left: -700%;
+  }
+
+  85%,
+  95% {
+    left: -800%;
+  }
+
+  95%,
+  105% {
+    left: -900%;
+  }
+
+  100% {
+    left: -1000%;
+  }
+}
+
+      /* IMAGE HOVER */
+
+.pic-container h1 {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: -4px;
+}
+.pic-container{
+  width: 100%;
+}
+.picture {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  /* column-gap: 10px; */
+  /* padding-bottom: 50px; */
+  /* overflow: hidden; */
+}
+  .picture img {
+  object-fit: cover;
+  width:100%;
+  height: 100%;
+  transition: all 1s;
+}  
+
+/* .picture div {
+  overflow: hidden;
+  overflow-y: hidden;
+} */
+
+.picture h4 {
+  color: #fffcfc;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  bottom: 35px;
+  left: 15px;
+}
+
+.picture img:hover {
+  transform: scale(1.05);
+}
+
+.box-img{
+  width:100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+input{
+  display: none;
+}
+
+.sec-nav{
+  width: 100%;
+  /* padding: 15px; */
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: -50px; */
+}
+
+.label-list{
+  display: flex;
+  width: 100%;
+}
+
+.label-list label[for="motorcycles"]{
+flex-grow: 1;
+}
+
+.label-list label{
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.motor{
+  font-size: 30px;
+}
+
+#shotgun:checked~.label-list label[for="shotgun"],
+#himalayan:checked~.label-list label[for="himalayan"]{
+  /* background-color: black; */
+  color: #ffffff;
+}
+
+/* #shotgun:checked~.label-list .shotgun{
+  display: block;
+} */
+
+#shotgun:checked~.hiding .himalayan,
+#shotgun:checked~.hiding .bullet,
+#shotgun:checked~.hiding .inter,
+#shotgun:checked~.hiding .continent,
+#shotgun:checked~.hiding .supermeteor,
+#shotgun:checked~.hiding .hunter,
+#shotgun:checked~.hiding .scram,
+#shotgun:checked~.hiding .classic,
+#shotgun:checked~.hiding .meteor,
+
+
+#himalayan:checked~.hiding .shotgun,
+#himalayan:checked~.hiding .bullet,
+#himalayan:checked~.hiding .inter,
+#himalayan:checked~.hiding .continent,
+#himalayan:checked~.hiding .supermeteor,
+#himalayan:checked~.hiding .hunter,
+#himalayan:checked~.hiding .scram,
+#himalayan:checked~.hiding .classic,
+#himalayan:checked~.hiding .meteor,
+
+#bullet:checked~.hiding .shotgun,
+#bullet:checked~.hiding .himalayan,
+#bullet:checked~.hiding .inter,
+#bullet:checked~.hiding .continent,
+#bullet:checked~.hiding .supermeteor,
+#bullet:checked~.hiding .hunter,
+#bullet:checked~.hiding .scram,
+#bullet:checked~.hiding .classic,
+#bullet:checked~.hiding .meteor,
+
+#inter:checked~.hiding .shotgun,
+#inter:checked~.hiding .himalayan,
+#inter:checked~.hiding .bullet,
+#inter:checked~.hiding .continent,
+#inter:checked~.hiding .supermeteor,
+#inter:checked~.hiding .hunter,
+#inter:checked~.hiding .scram,
+#inter:checked~.hiding .classic,
+#inter:checked~.hiding .meteor,
+
+#continent:checked~.hiding .shotgun,
+#continent:checked~.hiding .himalayan,
+#continent:checked~.hiding .bullet,
+#continent:checked~.hiding .inter,
+#continent:checked~.hiding .supermeteor,
+#continent:checked~.hiding .hunter,
+#continent:checked~.hiding .scram,
+#continent:checked~.hiding .classic,
+#continent:checked~.hiding .meteor,
+
+#supermeteor:checked~.hiding .shotgun,
+#supermeteor:checked~.hiding .himalayan,
+#supermeteor:checked~.hiding .bullet,
+#supermeteor:checked~.hiding .inter,
+#supermeteor:checked~.hiding .continent,
+#supermeteor:checked~.hiding .hunter,
+#supermeteor:checked~.hiding .scram,
+#supermeteor:checked~.hiding .classic,
+#supermeteor:checked~.hiding .meteor,
+
+#hunter:checked~.hiding .shotgun,
+#hunter:checked~.hiding .himalayan,
+#hunter:checked~.hiding .bullet,
+#hunter:checked~.hiding .inter,
+#hunter:checked~.hiding .continent,
+#hunter:checked~.hiding .supermeteor,
+#hunter:checked~.hiding .scram,
+#hunter:checked~.hiding .classic,
+#hunter:checked~.hiding .meteor,
+
+#scram:checked~.hiding .shotgun,
+#scram:checked~.hiding .himalayan,
+#scram:checked~.hiding .bullet,
+#scram:checked~.hiding .inter,
+#scram:checked~.hiding .continent,
+#scram:checked~.hiding .supermeteor,
+#scram:checked~.hiding .hunter,
+#scram:checked~.hiding .classic,
+#scram:checked~.hiding .meteor,
+
+#classic:checked~.hiding .shotgun,
+#classic:checked~.hiding .himalayan,
+#classic:checked~.hiding .bullet,
+#classic:checked~.hiding .inter,
+#classic:checked~.hiding .continent,
+#classic:checked~.hiding .supermeteor,
+#classic:checked~.hiding .hunter,
+#classic:checked~.hiding .scram,
+#classic:checked~.hiding .meteor,
+
+#meteor:checked~.hiding .shotgun,
+#meteor:checked~.hiding .himalayan,
+#meteor:checked~.hiding .bullet,
+#meteor:checked~.hiding .inter,
+#meteor:checked~.hiding .continent,
+#meteor:checked~.hiding .supermeteor,
+#meteor:checked~.hiding .hunter,
+#meteor:checked~.hiding .scram,
+#meteor:checked~.hiding .classic
+
+{
+  display: none;
+}
+
+/* #himalayan:checked~.hiding .himalayan{
+  display: block;
+} */
+
+.hiding{
+  width: 100%;
+  /* padding: 40px; */
+}
+.hiding div{
+  width: 100%;
+}
+.hiding img{
+  width: 100%;
+  object-fit: cover;
+  /* padding: 20px; */
+}
+
+.sec-img1{
+  width:100%;
+}
+
+.sec-link{
+  /* display: flex;
+  gap: 40px; */
+  position: relative;
+  right: 122px;
+}
+@media only screen and (min-width:300px) and (max-width:900px) {
+  .subnav {
+    position: fixed;
+    background-color: #000000;
+    left: 100%;
+    top: 60px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 50px;
+    align-items: center;
+    height: 99vh;
+    z-index: 999;
+  }
+  nav i{
+    position: relative;
+    font-size: 30px;
+    left:10%;
+    display: unset!important;
+  }
+}
